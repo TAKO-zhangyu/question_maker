@@ -1,1 +1,50 @@
-t
+<h2>質問メーカー</h2>
+
+<%= form_with url: homes_result_path, method: :post, local: true do |f| %>
+  <div class= "form-group">
+    お名前は？<%= f.text_field :name %>
+  </div>
+  <div class= "form-group">
+    何を実行しましたか？<%= f.text_field :action %>
+  </div>
+  <div class= "form-group">
+    どういうエラーが出ましたか？<%= f.text_field :error %>
+  </div>
+  <div class= "form-group">
+    行った手順は何ですか？<%= f.text_field :step %>
+  </div>
+  <div class= "form-group">
+    表示されたエラー文をコピペしてください<%= f.text_field :error_code %>
+  </div>
+  <div class= "form-group">
+    予想していた結果はどのようなものですか？<%= f.text_field :expect %>
+  </div>
+  <div class= "form-group">
+    参考資料はありますか？<%= f.text_field :reference %>
+  </div>
+  <div class= "form-group">
+    行った試行の内容は何ですか<%= f.text_field :try %>
+  </div>
+  <div class= "form-group">
+    その結果を教えてください<%= f.text_field :result %>
+  </div>
+  <div class= "form-group">
+    使用しているPCは？<%= f.text_field :user_pc %>
+  </div>
+  <div class= "form-group">
+   ローカル環境か、Dockerか？それともCloud 9か？<%= f.text_field :environment %>
+  </div>
+  <div class= "form-group">
+    使用エディター<%= f.text_field :editor %>
+  </div>
+  <div class= "form-group">
+    使用言語<%= f.text_field :programming_lang %>
+  </div>
+  <div class= "form-group">
+    GitHubのリンク<%= f.text_field :github_link %>
+  </div>
+  <div class= "form-group">
+    署名<%= f.text_field :signature %>
+  </div>
+  <%= f.submit %>
+<% end %>
