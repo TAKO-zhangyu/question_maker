@@ -3,24 +3,24 @@
   <h5>コピーしてご利用ください！</h5>
   <div class="mt-5">
 
-    <p>こんにちは、<%= @name %>です。</p>
-    <p><%= @action %>を実行すると、<%= @error %>というエラーになる問題で困っています。</p>
+    <p>こんにちは、<%= @params[:name] %>です。</p>
+    <p><%= @action %>を実行すると、<%= @params[:error] %>というエラーになる問題で困っています。</p>
     <p>私の行った手順は以下です。</p>
-    <p><%= @step %></p>
+    <p><%= @params[:step] %></p>
     <p>すると、以下のような結果になりました。</p>
-    <p><%= @error_code %></p>
-    <p>私が想像していた結果は<%= @expect %>です。</p>
-    <p>参考資料は<%= @reference %>です。</p>
+    <p><%= @params[:error_code] %></p>
+    <p>私が想像していた結果は<%= @params[:expect] %>です。</p>
+    <p>参考資料は<%= @params[:reference] %>です。</p>
     <p>原因を確かめるため、以下のようなテストを行ってみましたが、
     問題の解決には至りませんでした。</p>
-    <p>試したこと：<%= @try %>の実行</p>
-    <p>結果：<%= @result %></p>
-    <p>OS：<%= @user_pc %></p>
-    <p>開発環境：<%= @environment %></p>
-    <p>エディター：<%= @editor %></p>
-    <p>使用言語：<%= @programming_lang %></p>
-    <p>GitHubリンク：<%= @github_link %></p>
-    <p><%= @signature %></p>
+    <p>試したこと：<%= @params[:try] %>の実行</p>
+    <p>結果：<%= @params[:result] %></p>
+    <p>OS：<%= @params[:user_pc] %></p>
+    <p>開発環境：<%= @params[:environment] %></p>
+    <p>エディター：<%= @params[:editor] %></p>
+    <p>使用言語：<%= @params[:programming_lang] %></p>
+    <p>GitHubリンク：<%= @params[:github_link] %></p>
+    <p><%= @params[:signature] %></p>
 
   </div>
 </div>
